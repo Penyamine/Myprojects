@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+    <link rel="stylesheet" href="../style.css?hash=<?php echo $hash;?>">
+        <script  src="/search_product.js" type="text/javascript"defer ></script>
+
+    <title>Deemas Groups</title>
+</head>
+<body>
+    <div class="landing">
+        <div id="first-slide">
+        
+            <nav id="navbar">
+                <!-- Logo -->
+                <div class="icon">
+                    <img
+                        class="logo-icon"
+                        src="../static/images/logo.png"
+                        alt="Logo"
+                    />
+                </div>
+    
+                <!-- Navigation List -->
+                <ul id="nav-list">
+                    <li><a href="#first-slide">Home</a></li>
+                    <li><a href="#second-slide">About Us</a></li>
+                    <li><a href="#third-slide">Services</a></li>
+                    <li><a href="#fourth-slide">Products</a></li>
+                    <li><a href="#fifth-slide">Support</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+    
+                <!-- Search Bar -->
+                <!-- <div id="nav-search">
+                    <input
+                        type="text"
+                        id="search-field"
+                        placeholder="Search products"
+                    />
+                </div> -->
+    
+                <!-- Contact Button -->
+                <button class="contact-btn">Contact Us</button>
+    
+                <!-- Hamburger Menu -->
+                <div id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+    
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden">
+                <ul>
+                    <li><a href="#first-slide">Home</a></li>
+                    <li><a href="#second-slide">About Us</a></li>
+                    <li><a href="#third-slide">Services</a></li>
+                    <li><a href="#fourth-slide">Products</a></li>
+                    <li><a href="#fifth-slide">Support</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+    
+            <script>
+                const hamburger = document.getElementById("hamburger");
+                const mobileMenu = document.getElementById("mobile-menu");
+    
+                hamburger.addEventListener("click", () => {
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenu.style.maxHeight = mobileMenu.style.maxHeight
+                        ? null
+                        : "300px";
+                });
+            </script>      
+
+            <div id="loader" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+
+        <div class="search">
+        <input type="search" name="search" id="search"  placeholder="Search Your Product What You Want...">
+            <button id="search-btn" type="button">Search Product</button>
+        </div>
+
+    <div class="mainText">
+        <div class="mainImage">
+            <img src="../static/images/logo.png" alt="Logo" srcset="">
+        </div>
+        
+        <div class="welcomeDesc">
+            Welcome to Deemas Groups import and Export 
+            innovative Services
+        </div>
+        
+        <div class="mainDesc">
+            Trades Brings People Together and builds bridges 
+            across cultures
+        </div>
+        <div class="desc">
+            We specialize in seemless import and export services ,connecting
+            business globally.With Reliable logistics,quality assurance and 
+            timely deliveries.We ensure smooth trade across borders.
+            Trust us to handle your international shipping needs with efficiency and care.
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <div id="second-slide"> 
+        <div class="about-deemas"> <span style="color: red;">About </span> Deemas </div> 
+        <div class="content-wrapper"> 
+            <div class="about-content"> 
+                <h2>Get To Know Us</h2> 
+                <div class="brief-desc-about-deemas"> 
+                    We specialize in seamless import and export services, 
+                    connecting businesses globally. With reliable logistics, 
+                    quality assurance, and timely deliveries, 
+                    we ensure smooth trade across borders. Trust us to handle your international 
+                    shipping needs with efficiency and care. 
+                </div> 
+                <span id="more-text" class="hidden"> 
+                    Our team of experts works around the clock to ensure that your goods reach their destination safely and on time.
+                     We provide comprehensive customs brokerage services, detailed tracking,
+                     and customer support to ensure your satisfaction every step of the way.
+                </span>
+                <button class="read-more-btn-slide2" onclick="toggleText()">Read More</button> 
+            </div>
+            <div class="delivery-image"> 
+                <img src="../static/images/DeliveryTruck.gif" alt="delivery-image" srcset=""> 
+            </div> 
+     
+        </div> 
+        <script>
+            function toggleText() {
+                const moreText = document.getElementById("more-text");
+                const btnText = document.querySelector(".read-more-btn-slide2");
+
+                if (moreText.classList.contains("hidden")) {
+                moreText.classList.remove("hidden");
+                btnText.textContent = "Read Less";
+                }
+                else {
+                    moreText.classList.add("hidden");
+                    btnText.textContent = "Read More";
+                }
+            }
+        </script>        
+    </div>
+    <div id="third-slide">
+        <div class ="services-img">
+            <!-- <img src="" alt="services" srcset=""  id="img-content"> -->
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="../static/images/third_slide_img/import .png" alt="" srcset="">
+                </div>
+                <div class="service-title">Import</div>
+                <div class="service-discription">
+                    Importing is not just about bringing goods into a country ,
+                    it's about enriching your business and culture
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="../static/images/third_slide_img/export.png" alt="" srcset="">
+                </div>
+                <div class="service-title">Export</div>
+                <div class="service-discription">
+                    Successful companies don't just expoort products 
+                    -they export trust and import growth
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="../static/images/third_slide_img/delivery-truck.png" alt="" srcset="">
+                </div>
+                <div class="service-title">Transport</div>
+                <div class="service-discription">
+                    Trust in transport is built on timely delivery,safety, and consistency
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">
+                    <img src="../static/images/third_slide_img/customer-service.png" alt="">
+                </div>
+                <div class="service-title">Assurance</div>
+                <div class="service-discription">
+                    Customer satisfaction isn't just a goal;it's out guarantee
+                </div>
+            </div>
+        </div>
+        <div class="desc-about-services">
+            <div class="desc-content">
+                <h1 id="desc-services-head"><span style="color: red;">Services</span> We can Offer You !</h1>
+                <div class="services-desc">
+                    We specialize in seemless import and export services ,connecting
+                    business globally.With Reliable logistics,quality assurance and 
+                    timely deliveries.We ensure smooth trade across borders.
+                    Trust us to handle your international shipping needs with efficiency and care.
+                </div>            
+    
+            </div>
+        </div>
+    </div>
+
+    <div id="fourth-slide">
+
+        <div class ="our-products">
+            Our Products
+        </div>
+        <br>
+        <div class="products">
+            <h2><span style="color:rgb(245, 41, 41)">Our Products </span>We have Provided</h2>
+
+            <template id="product-template">
+                <div class="product-card">
+                    <div class="product-left-div">
+                        <div class="left-contain">
+                            <img src="" alt="" srcset="" class="product-image">
+                            <button for="stock-btn" id="stock-btn">Out Of Stock</button>    
+                        </div>
+                    </div>
+                    <div class="product-right-div">
+                        <div class="product-title"></div>
+                        <div class="product-description"></div>    
+                        <div class="contact-to-buy">
+                            <button type="button" id="buy-to-contact-btn" class="buy-to-contact-btn">Buy To Contact</button>
+                            <img src="../static/images/fourth_slide_img/whatsapp.svg" alt="Whatshap" >
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div class="product-list">
+
+            </div>
+    
+        </div>
+
+    </div>
+        <div id="fifth-slide">
+        <div>
+            <h1>What Our <span style="color: red;">Customer</span> <br> Say About Us</h1>
+        </div>
+        <div id="feedback">
+            <div class="testimonial-item">
+                <div class="testimonial-icon">“</div>
+                <div class="name">Murugan</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="feedback-discription">
+                    The export service was seamless, and the products arrived on time in excellent condition. Highly reliable!
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-icon">“</div>
+                <div class="name">Vijay</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="feedback-discription">
+                    "The customer service team was incredibly responsive and helped me resolve my issues quickly and efficiently."
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-icon">“</div>
+                <div class="name">Saravanan</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="feedback-discription">
+                    "I’m really impressed with the durability and design of this product – it’s exactly what I needed."
+                </div>
+            </div>
+        </div>
+        <div class="show-more-comment">
+
+            <button type="button" id="comment-btn">show More Comments...</button>
+
+        </div>
+
+    </div>
+    <div id="sixth-slide">
+        <h4>Contact Us</h4>
+        <h1>
+            <span style="color: red;">Contact</span> Us & We Can <br> Work Together
+        </h1>
+        <p>Contact us today for reliable import and export solutions tailored to your business needs.</p>
+        <form action="../send_email.php" id="contact-form" method="POST">
+            <input type="text" name="name" id="contact-name" placeholder="Your Name" required> 
+            <input type="email" name="email" id="contact-email" placeholder="Your Email" required>
+            <textarea name="message" id="contact-message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="button" id="contact-submit">Submit Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <div id="footer-container" class="footer-container">
+            <!-- Section 1: Company Info -->
+            <div class="footer-section" id="footer-section-1">
+                <div class="logo"><img src="../static/images/logo.png" alt="Deemas Groups Logo"></div>
+                <div class="company-name">DEEMAS GROUPS</div>
+                <div class="sub-name">BAIRAVAR THARISANAM TRADERS</div>
+                <div class="social-icons">
+                    <a href="https://youtube.com/@bairavartharisanamvisionbt5146?si=xf7Bl6X3cNPG3sig" target="_blank" class="icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon">
+                    </a>
+                    <a href="https://www.instagram.com/sundar_bairavar8/profilecard/?igsh=c3E4dDFhZnB0eGo4" target="_blank" class="icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
+                    </a>
+                    <a href="https://www.facebook.com/BairavarTharisanam?mibextid=ZbWKwL" target="_blank" class="icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
+                    </a>
+                    <a href="tiktok.com/@bairavartharisanam" target="_blank" class="icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="Tiktok Icon">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Section 2: Address -->
+            <div class="footer-section" id="footer-section-2">
+                <h5>Address</h5>
+                <div class="address-info">
+                    <div class="head-office">
+                        <h6>Head Office</h6>
+                        <p>No1/2 Katthan Rao Complex, Rajamoolasalai, Rajagopalapuram, Kuthalam 609 801, Mayiladuthurai, Tamil Nadu, India.</p>
+                    </div>
+                    <div class="branch-office">
+                        <h6>Branch</h6>
+                        <p>Unit 8 G 16 Cempakapuri 1&2, Jalan BBN 6/2 Bandar Baru Nilai, Putra Nilai 71800 Nilai, Negeri Sembilan, Malaysia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Contact Info -->
+            <div class="footer-section" id="footer-section-3">
+                <h5>Contact Information</h5>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:deemas9557@gmail.com">deemas9557@gmail.com</a></p>
+                    <p>Phone 1: <a href="tel:+917200488393">+91 7200488393</a></p>
+                    <p>Phone 2: <a href="tel:+601161876834">+60 11-618 76834</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>Copyright &copy; Deemas Groups, 2024. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Website Terms</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookies Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    </div>
+        <script>
+            
+        document.addEventListener('DOMContentLoaded',()=>
+        {
+            const username=sessionStorage.getItem('username');
+            const email=sessionStorage.getItem('email');
+            // alert(username+" "+email);
+            // console.log(username+" "+email);
+            if(username===null&& email===null)
+            {   
+                window.location.href='user.html';
+            }
+        })
+
+
+
+
+//         document.getElementById("search-btn").addEventListener("click", function () {
+//     // Get the search input
+//             alert("clicked");
+//     const searchQuery = document.getElementById("search").value.trim();
+
+//     if (searchQuery === "") {
+//         alert("Please enter a search term!");
+//         return;
+//     }
+//     else
+//         searchProductForThisQuery();
+// });
+
+    </script>
+
+    <script  src="/product_updation.js" type="text/javascript"defer ></script>
+    <!-- <script  src="../js_files/buy_product.js" type="text/javascript" defer></script> -->
+</body>
+</html>

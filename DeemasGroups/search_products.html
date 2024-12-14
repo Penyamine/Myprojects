@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deemas Groups</title>
+    <link rel="stylesheet" href="/search_product_style.css" />
+    <!-- <script src="/product_updation.js" type="text/javascript" defer></script> -->
+</head>
+<body>
+    <div class="search-products">
+        <h2><span style="color:rgb(245, 41, 41)">Our Products </span>We have Provided</h2>
+
+        <template id="search-product-template">
+            <div class="search-product-card">
+                <div class="search-product-left-div">
+                    <div class="search-left-contain">
+                        <img src="" alt="" srcset="" class="search-product-image">
+                        <button for="search-stock-btn" id="search-stock-btn">Out Of Stock</button>    
+                    </div>
+                </div>
+                <div class="search-product-right-div">
+                    <div class="search-product-title"></div>
+                    <div class="search-product-description"></div>    
+                    <div class="search-contact-to-buy">
+                        <button type="button" id="search-buy-to-contact-btn" class="search-buy-to-contact-btn">Buy To Contact</button>
+                        <img src="../static/images/fourth_slide_img/whatsapp.svg" alt="Whatshap" >
+                    </div>
+                </div>
+            </div>
+        </template>
+        <div class="search-product-list">
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+// Retrieve data from sessionStorage
+
+        const matchingProducts = JSON.parse(sessionStorage.getItem('matchingProducts'));
+
+        if (matchingProducts) {
+    console.log("Matching Products to search Productt html:", matchingProducts);
+    // Use the data to display in the new page
+    const productList = document.getElementById('search-product-list');
+    matchingProducts.forEach((product) => {
+            document.querySelector('.search-product-list').appendChild(templateForProduct(product));
+            return;
+        });
+    }   
+    else {
+        console.log("No matching products found.");
+    }
+
+
+    function templateForProduct(product) {
+        const template = document.getElementById('search-product-template');
+        const product_card = template.content.cloneNode(true);
+    
+        product_card.querySelector('.search-product-title').textContent = product['product_name'];
+        product_card.querySelector('.search-product-image').src = `data:image/*;base64,${product.product_image}`;
+        product_card.querySelector('.search-product-description').textContent = product['product_description'];
+    
+        // Add event listener to the "Buy to Contact" button
+        const buyButton = product_card.querySelector('.search-buy-to-contact-btn');
+        buyButton.addEventListener('click', () => {
+            const message = `Hi, I'm interested in the product: ${product['product_name']}`;
+            const whatsappURL = `https://wa.me/${sessionStorage.getItem('phone')}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank'); // Open WhatsApp link in a new tab
+        });
+    
+        return product_card;
+    }
+
+    </script>
+
+    
+</body>
+</html>
